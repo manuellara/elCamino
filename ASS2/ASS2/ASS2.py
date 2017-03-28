@@ -11,16 +11,16 @@ def intro( name ) :
     return
 
 def P( p ) :
-    print ("Loan amount: {:>57,.2f}" .format(p))                                      #prints loan amount statement
+    print ("Loan amount: {:>57,.2f}" .format(p))                                       #prints loan amount statement
     return
 
 def r( interestRate ) :
-    r = interestRate / 12                                                   #calculates annual monthly interest rate 
+    r = interestRate / 12                                                              #calculates annual monthly interest rate 
     print("Annual monthly interest rate will be: {:>32,.4f}" .format(r) )
     return 
 
 def n( numOfYears ) :
-    n = numOfYears * 12                                                     #calculates amount of payment periods 
+    n = numOfYears * 12                                                                #calculates amount of payment periods 
     print ("Amount of payment periods: {:>39,.0f}" .format(n) )
     return 
 
@@ -29,7 +29,7 @@ def A( p , interestRate , numOfYears ) :
     n = numOfYears * 12
     r = interestRate / 12
     x = (1+r)**n
-    a = p * ( (r * x) / (x - float(1)) )                                     #calculates payment amount 
+    a = p * ( (r * x) / (x - float(1)) )                                               #calculates payment amount 
     print ("Payment amounts per period: {:>41,.2f}" .format(a) )
     print ("Numer of payments: {:>50,.2f}" .format(n) )
     print ("Total cost of loan: {:>50,.2f}" .format(t) )                         
