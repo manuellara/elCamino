@@ -7,29 +7,32 @@
 ###################################
 
 def intro( name ) :
-    print( "\n\n\n\n\nLoan payment information for %s " % name )            #prints name statement 
+    print( "\n\n\n\n\nLoan payment information for: {:>39s}" .format(name) )            #prints name statement 
     return
 
 def P( p ) :
-    print ("Loan amount: $%10.2f" % p)                                      #prints loan amount statement
+    print ("Loan amount: {:>57,.2f}" .format(p))                                      #prints loan amount statement
     return
 
 def r( interestRate ) :
     r = interestRate / 12                                                   #calculates annual monthly interest rate 
-    print("Annual monthly interest rate will be: %2.4f" % r )
+    print("Annual monthly interest rate will be: {:>32,.4f}" .format(r) )
     return 
 
 def n( numOfYears ) :
     n = numOfYears * 12                                                     #calculates amount of payment periods 
-    print ("Amount of payment periods: %3.0f" % n )
+    print ("Amount of payment periods: {:>39,.0f}" .format(n) )
     return 
 
 def A( p , interestRate , numOfYears ) :
+    t = p + (p / interestRate)
     n = numOfYears * 12
     r = interestRate / 12
     x = (1+r)**n
     a = p * ( (r * x) / (x - float(1)) )                                     #calculates payment amount 
-    print ("Payment amounts per period: %10.2f" % a)                         #PROBLEM
+    print ("Payment amounts per period: {:>41,.2f}" .format(a) )
+    print ("Numer of payments: {:>50,.2f}" .format(n) )
+    print ("Total cost of loan: {:>50,.2f}" .format(t) )                         
     return 
 
 
