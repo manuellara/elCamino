@@ -14,26 +14,46 @@ def P( p ) :
     print ("Loan amount: {:>57,.2f}" .format(p))                                       #prints loan amount statement
     return
 
-def r( interestRate ) :
-    r = interestRate / 12                                                              #calculates annual monthly interest rate 
-    print("Annual monthly interest rate will be: {:>32,.4f}" .format(r) )
+def r( interestRate , numOfYears ) :
+    n = numOfYears * 12
+    r = interestRate / n                                                         #calculates annual monthly interest rate 
+    print("Annual monthly interest rate will be: {:>32,.4f}%" .format(r) )
     return 
 
 def n( numOfYears ) :
     n = numOfYears * 12                                                                #calculates amount of payment periods 
-    print ("Amount of payment periods: {:>39,.0f}" .format(n) )
+    print ("Amount of payments: {:>50,.0f}" .format(n) )
     return 
 
-def A( p , interestRate , numOfYears ) :
-    t = p + (p / interestRate)
+def A( p , interestRate , numOfYears ) :                                            #calculates payment amount 
+    t = p + (p * interestRate)
     n = numOfYears * 12
-    r = interestRate / 12
-    x = (1+r)**n
-    a = p * ( (r * x) / (x - float(1)) )                                               #calculates payment amount 
-    print ("Payment amounts per period: {:>41,.2f}" .format(a) )
-    print ("Numer of payments: {:>50,.2f}" .format(n) )
+    r = interestRate / n 
+    a = ( r + 1 )**n
+    mp = (p * ((r * a) /  (a - 1)))
+    print ("Monthly payment amounts: {:>45,.2f}" .format(mp) )
     print ("Total cost of loan: {:>50,.2f}" .format(t) )                         
     return 
+
+def table( p, interestRate , numOfYears ) :
+    n = numOfYears * 12
+    print ( "Payment# {:>20} {:>20} {:>20} {:>20} {:>20}" .format("Beginning" , "Monthly Payment" , "Interest" , "Principal" , "Ending Balance") )
+    for i in range(1 , int(n)+1 ) :
+        t = p + (p * interestRate)
+        n = numOfYears * 12
+        r = interestRate / n 
+        a = ( r + 1 )**n
+        mp = (p * ((r * a) /  (a - 1)))
+
+        beginning = p
+        mPayment = mp
+        interest = beginning * r
+        principal = mPayment - interest
+        endBalance = beginning - principal
+        print ( i, "{:>20,.2f} {:>20,.2f} {:>20,.2f} {:>20,.2f} {:>20,.2f}" .format(beginning , mPayment , interest , principal , endBalance) )
+        beginning = endBalance
+
+    return
 
 
 
@@ -56,6 +76,8 @@ if x == 'y' :
     elif interestRate != float(interestRate) :
         print("You did not enter a number...")
         exit()
+    else :
+        interestRate = interestRate /100
     numOfYears = float(input("How many years do you want to pay off loan? "))
     if numOfYears <= 0 :
         print("Number of years to pay off loan cannot be negative or 0")
@@ -73,6 +95,7 @@ else :
 
 intro( name )
 P( p )
-r( interestRate )
+r( interestRate , numOfYears )
 n( numOfYears )
 A( p , interestRate , numOfYears )
+table( p, interestRate , numOfYears )
