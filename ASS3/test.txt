@@ -1,0 +1,19 @@
+Name                 ID                   Gross Income         Taxes                Net Income          
+====================================================================================================
+Miss Informed        125432               32560.00             ****INVALID ID      
+Sweet Tooth          5432                 9500.00              435.00               8795.00             
+Bad ID Data          45                   4500.00              ****INVALID ID      
+Bad income Data      1255                 -4500.00             ****INVALID Salary  
+John Smith           1225                 3500.00              0.00                 3500.00             
+Bad Id2 Data         12456                7800.00              ****INVALID ID      
+Nancy Brown          1555                 154500.00            40930.00             104800.00           
+Al Boundy Jr.        1999                 3500.00              0.00                 3500.00             
+Joe Williams         2999                 8000.00              270.00               7730.00             
+Henry Kingston       2998                 20000.00             1590.00              18140.00            
+Karl Livington       1997                 34000.00             3970.00              28440.00            
+James Adelton        1889                 54000.00             8770.00              41260.00            
+
+
+Avg Net Income                           27020.62            
+Highest Net Income                       Nancy Brown          104800.00           
+Lowest Net Income                        John Smith           3500.00             
