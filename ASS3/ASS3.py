@@ -1,4 +1,4 @@
-####################################
+#####################################################################
 # Manuel Lara
 # CS 14 - Assignemnt 3
 #
@@ -69,7 +69,7 @@
 # prompt user to enter file path and store it in fileName
 # prompt user to enter output file name and store it in outputName
 # CALL 'inputFile' and pass fileName and outputFile
-# 
+################################################################################
 
 
 # FUNCTIONS #
