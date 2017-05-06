@@ -1,6 +1,6 @@
 #####################################################################
 # Manuel Lara
-# CS 14 - Assignemnt 3
+# CS 14 - Assignment 3
 #
 # Algorithm 
 #
@@ -12,14 +12,14 @@
 # open the output in 'write' mode
 # reroute the print function to the output file
 # initialize count , totalNet , avgCounter , highestNet , lowestNet to None , lowestName
-# inititalize a 'for' loop to go through every line in the file
-#   if the counter remainer is 0 only pick up the first line and CALL 'getName' and pass the line 
+# initialize a 'for' loop to go through every line in the file
+#   if the counter remainder is 0 only pick up the first line and CALL 'getName' and pass the line 
 #   else CALL 'getIDSalary' and pass the line - set the return values to ID , salary , avgCount
 #   CALL 'calculateTaxNet' and pass salary - set return values to tax , net
 #   CALL 'output' and pass count , name , ID , salary tax , net
 #   increment avgCounter with avgCount
 #   if agvCount does not equal 0 , add net to totalNet
-#   if count does not equal 0 , divide totalNet byt avgCounter to get avgNet
+#   if count does not equal 0 , divide totalNet by avgCounter to get avgNet
 #   if net is greater that highestNet , set net to highestNet
 #   if  lowestNet is None , set lowestNet to net
 #   if net is less than lowest net and not negative , set net to lowestNet 
@@ -70,6 +70,7 @@
 # prompt user to enter output file name and store it in outputName
 # CALL 'inputFile' and pass fileName and outputFile
 ################################################################################
+
 
 
 # FUNCTIONS #

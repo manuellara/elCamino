@@ -1,0 +1,24 @@
+Miss Informed
+125432 32560.0
+Sweet Tooth
+5432 9500
+Bad ID Data
+45 4500.0
+Bad income Data
+1255 -4500.0
+John Smith
+1225 3500.0
+Bad Id2 Data
+12456 7800.0
+Nancy Brown
+1555 154500.00
+Al Boundy Jr.
+1999 3500.00
+Joe Williams
+2999 8000.00
+Henry Kingston
+2998 20000.00
+Karl Livington
+1997 34000.0
+James Adelton
+1889 54000.0
