@@ -1,0 +1,20 @@
+Course Name :                      Introduction to Computer Programming Fundamentals           
+Fundamentals Course ID :           CSCI 101                                     
+Location :                         SAL 101                                      
+
+Name                     ID                       Average   Grade
+=================================================================
+John Adams               ***-**-3333              44.20     I    
+Willy Smith Jr.          ***-**-4444              74.60     C    
+Phil Jordan              ***-**-6666              80.20     B    
+Miriam Carlton Jones     ***-**-1111              100.00    A    
+Harry Williams           ***-**-4444              70.20     C    
+Gary Hawkins             ***-**-6666              73.50     C    
+Hal Jankins              ***-**-1111              0.00      I    
+John Johnsen             ***-**-4444              100.00    A    
+Nancy Morgan Foley       ***-**-6666              90.26     A    
+Allan Hanker             ***-**-7777              57.06     F    
+Helen Gardner            ***-**-6666              88.30     B    
+Jack Dolan III           ***-**-7777              74.00     C    
+Jerry Mac Alister        ***-**-7777              88.48     B    
+Haward Jackson           ***-**-9999              80.00     B    
