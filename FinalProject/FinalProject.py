@@ -1,134 +1,130 @@
 '''
-#
-# Final Project CS 14
-# Manuel Lara
-#
-# def menu :
-#   takes outputFileName , students , title , course , location 
-#   print out menu options
-#   prompt the user to select an option
-#   CALL waitForChar() 
-#   once we have user input, execute corresponding action 
-#   pause for 5 seconds 
-#   clear screen
-#   CALL menu again and pass outputFileName , students , title , course , location
-#
-# def waitForChar :
-#   prompt user for input 
-#   return the first letter of the input
-#
-# def readInFile :
-#   prompt user to drag in file 
-#   prompt user to give output file a name 
-#   return both filename and output file name 
-# 
-# def readFile :
-#   pass file name
-#   open the file 
-#   create students list
-#   read first 3 lines as title, course , location
-#   for line in the file, read 1st line as the name and 2nd line as the id and scores
-#   CALL calcScore and set return variables to average , letter grade , list of test scores
-#   create record of type dictionary and set keys + values
-#   append dictionary to students list
-#   close input file
-#   return students list , title , course , location
-#
-# def calcScore :
-#   pass in the quiz score and all 6 test scores
-#   sort the test scores and pop the last one 
-#   calculate weight and set to avg
-#   assign letter grade based on the avg
-#   return avg letter grade and list of test scores 
-#
-# def printStatement :
-#   pass outputFileName , students , title , course , location
-#   print header to monitor
-#   iterate through students list and prints statement to monitor
-#
-# def outputFile :
-#   pass outputFileName , students , title , course , location
-#   open output file
-#   print header to file
-#   iterate through students and print them to output file
-#   close output file
-#
-# def sortAlpahbetically :
-#   pass students
-#   sort students by 'lastName'
-#   print header to monitor 
-#   iterate through students and print statement to monitor 
-#
-# def sortByGrade :
-#   pass students
-#   sort students by 'avg'
-#   print header to monitor 
-#   iterate through students and print statement to monitor 
-#
-# def addStudent :
-#   pass students
-#   prompt for first and last name 
-#   prompt for id
-#   CALL idChecker and set return value to id 
-#   prompt for quiz score 
-#   CALL qsChecker and set return value to quiz score
-#   prompt user for 6 test scores 
-#   CALL scoreChecker and set return values to the 6 scores
-#   CALL calcScore and set return values to avg , letter grade , list of test scores
-#   declare record of type dictionary and keys + values
-#   append dictionary record to students 
-#   return students
-#
-# def removeStudent 
-#   pass students 
-#   prompt user for the last name of the record they ant to remove
-#   iterate through students and compare the last name to the last name values 
-#   if theres a match, remove the dictionary from the list
-#   return students
-#
-# def editStudent :
-#   pass students
-#   prompt user for last name of the record they want to edit
-#   iterate through students and compare last name to values 
-#   if last name in the record, prompt user if they want to edit test or quiz
-#   if they select test , prompt user for 6 test scores
-#   CALL scoreChecker 
-#   set the quiz score value to equal the same as it did
-#   CALL calcScore and set return values to avg , letter grade , list of tests 
-#   set keys and new values
-#   return students
-#   if quiz is selected, prompt user for quiz score
-#   CALL qsChecker 
-#   take apart list of test scores to individual values 
-#   CALL calcScore and set return values to avg , letter grade , list of tests 
-#   set keys and new values
-#   return students
-#
-# def idChecker :
-#   pass id
-#   if length is not 9 , prompt user to enter a new id until length is 9
-#   return id
-#
-# def qsChecker :
-#   pass quiz score 
-#   if quiz score is less than or equal to 100, return quiz score 
-#   else , keep asking for quiz score until condition is met , then return quiz score 
-#
-# def scoreChecker :
-#   pass 6 test scores
-#   put test scores in a list
-#   iterate through list to verify scores are numbers 
-#   if score is not a number , keep prompting user for a real number until condition is met
-#   return 6 scores
-#
-#   ************ MAIN ************
-#   import os
-#   import time
-#   import operator 
-#   CALL readFile() and set return values to fileName , outputFileName
-#   CALL readFile and pass fileName , set return values to students , title , course , location
-#   CALL menu and pass outputFileName , students , title , course , location
-#
+ Final Project CS 14
+ Manuel Lara
+
+ def menu :
+   takes outputFileName , students , title , course , location 
+   print out menu options
+   prompt the user to select an option
+   CALL waitForChar() 
+   once we have user input, execute corresponding action 
+   pause for 5 seconds 
+   clear screen
+   CALL menu again and pass outputFileName , students , title , course , location
+
+ def waitForChar :
+   prompt user for input 
+   return the first letter of the input
+
+ def readInFile :
+   prompt user to drag in file 
+   prompt user to give output file a name 
+   return both filename and output file name 
+ 
+ def readFile :
+   pass file name
+   open the file 
+   create students list
+   read first 3 lines as title, course , location
+   for line in the file, read 1st line as the name and 2nd line as the id and scores
+   CALL calcScore and set return variables to average , letter grade , list of test scores
+   create record of type dictionary and set keys + values
+   append dictionary to students list
+   close input file
+   return students list , title , course , location
+
+ def calcScore :
+   pass in the quiz score and all 6 test scores
+   sort the test scores and pop the last one 
+   calculate weight and set to avg
+   assign letter grade based on the avg
+   return avg letter grade and list of test scores 
+
+ def printStatement :
+   pass outputFileName , students , title , course , location
+   print header to monitor
+   iterate through students list and prints statement to monitor
+
+ def outputFile :
+   pass outputFileName , students , title , course , location
+   open output file
+   print header to file
+   iterate through students and print them to output file
+   close output file
+
+ def sortAlpahbetically :
+   pass students
+   sort students by 'lastName'
+   print header to monitor 
+   iterate through students and print statement to monitor 
+
+ def sortByGrade :
+   pass students
+   sort students by 'avg'
+   print header to monitor 
+   iterate through students and print statement to monitor 
+
+ def addStudent :
+   pass students
+   prompt for first and last name 
+   prompt for id
+   CALL idChecker and set return value to id 
+   prompt for quiz score 
+   CALL qsChecker and set return value to quiz score
+   prompt user for 6 test scores 
+   CALL scoreChecker and set return values to the 6 scores
+   CALL calcScore and set return values to avg , letter grade , list of test scores
+   declare record of type dictionary and keys + values
+   append dictionary record to students 
+   return students
+
+ def removeStudent 
+   pass students 
+   prompt user for the last name of the record they ant to remove
+   iterate through students and compare the last name to the last name values 
+   if theres a match, remove the dictionary from the list
+   return students
+
+ def editStudent :
+   pass students
+   prompt user for last name of the record they want to edit
+   iterate through students and compare last name to values 
+   if last name in the record, prompt user if they want to edit test or quiz
+   if they select test , prompt user for 6 test scores
+   CALL scoreChecker 
+   set the quiz score value to equal the same as it did
+   CALL calcScore and set return values to avg , letter grade , list of tests 
+   set keys and new values
+   return students
+   if quiz is selected, prompt user for quiz score
+   CALL qsChecker 
+   take apart list of test scores to individual values 
+   CALL calcScore and set return values to avg , letter grade , list of tests 
+   set keys and new values
+   return students
+
+ def idChecker :
+   pass id
+   if length is not 9 , prompt user to enter a new id until length is 9
+   return id
+
+ def qsChecker :
+   pass quiz score 
+   if quiz score is less than or equal to 100, return quiz score 
+   else , keep asking for quiz score until condition is met , then return quiz score 
+
+ def scoreChecker :
+   pass 6 test scores
+   put test scores in a list
+   iterate through list to verify scores are numbers 
+   if score is not a number , keep prompting user for a real number until condition is met
+   return 6 scores
+
+   ************ MAIN ************
+ 
+   CALL readFile() and set return values to fileName , outputFileName
+   CALL readFile and pass fileName , set return values to students , title , course , location
+   CALL menu and pass outputFileName , students , title , course , location
 '''
 
 class student:
