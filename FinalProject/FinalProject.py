@@ -1,15 +1,135 @@
-##################
+'''
 #
 # Final Project CS 14
 # Manuel Lara
 #
+# def menu :
+#   takes outputFileName , students , title , course , location 
+#   print out menu options
+#   prompt the user to select an option
+#   CALL waitForChar() 
+#   once we have user input, execute corresponding action 
+#   pause for 5 seconds 
+#   clear screen
+#   CALL menu again and pass outputFileName , students , title , course , location
 #
+# def waitForChar :
+#   prompt user for input 
+#   return the first letter of the input
 #
+# def readInFile :
+#   prompt user to drag in file 
+#   prompt user to give output file a name 
+#   return both filename and output file name 
+# 
+# def readFile :
+#   pass file name
+#   open the file 
+#   create students list
+#   read first 3 lines as title, course , location
+#   for line in the file, read 1st line as the name and 2nd line as the id and scores
+#   CALL calcScore and set return variables to average , letter grade , list of test scores
+#   create record of type dictionary and set keys + values
+#   append dictionary to students list
+#   close input file
+#   return students list , title , course , location
 #
+# def calcScore :
+#   pass in the quiz score and all 6 test scores
+#   sort the test scores and pop the last one 
+#   calculate weight and set to avg
+#   assign letter grade based on the avg
+#   return avg letter grade and list of test scores 
 #
+# def printStatement :
+#   pass outputFileName , students , title , course , location
+#   print header to monitor
+#   iterate through students list and prints statement to monitor
 #
+# def outputFile :
+#   pass outputFileName , students , title , course , location
+#   open output file
+#   print header to file
+#   iterate through students and print them to output file
+#   close output file
 #
-#################
+# def sortAlpahbetically :
+#   pass students
+#   sort students by 'lastName'
+#   print header to monitor 
+#   iterate through students and print statement to monitor 
+#
+# def sortByGrade :
+#   pass students
+#   sort students by 'avg'
+#   print header to monitor 
+#   iterate through students and print statement to monitor 
+#
+# def addStudent :
+#   pass students
+#   prompt for first and last name 
+#   prompt for id
+#   CALL idChecker and set return value to id 
+#   prompt for quiz score 
+#   CALL qsChecker and set return value to quiz score
+#   prompt user for 6 test scores 
+#   CALL scoreChecker and set return values to the 6 scores
+#   CALL calcScore and set return values to avg , letter grade , list of test scores
+#   declare record of type dictionary and keys + values
+#   append dictionary record to students 
+#   return students
+#
+# def removeStudent 
+#   pass students 
+#   prompt user for the last name of the record they ant to remove
+#   iterate through students and compare the last name to the last name values 
+#   if theres a match, remove the dictionary from the list
+#   return students
+#
+# def editStudent :
+#   pass students
+#   prompt user for last name of the record they want to edit
+#   iterate through students and compare last name to values 
+#   if last name in the record, prompt user if they want to edit test or quiz
+#   if they select test , prompt user for 6 test scores
+#   CALL scoreChecker 
+#   set the quiz score value to equal the same as it did
+#   CALL calcScore and set return values to avg , letter grade , list of tests 
+#   set keys and new values
+#   return students
+#   if quiz is selected, prompt user for quiz score
+#   CALL qsChecker 
+#   take apart list of test scores to individual values 
+#   CALL calcScore and set return values to avg , letter grade , list of tests 
+#   set keys and new values
+#   return students
+#
+# def idChecker :
+#   pass id
+#   if length is not 9 , prompt user to enter a new id until length is 9
+#   return id
+#
+# def qsChecker :
+#   pass quiz score 
+#   if quiz score is less than or equal to 100, return quiz score 
+#   else , keep asking for quiz score until condition is met , then return quiz score 
+#
+# def scoreChecker :
+#   pass 6 test scores
+#   put test scores in a list
+#   iterate through list to verify scores are numbers 
+#   if score is not a number , keep prompting user for a real number until condition is met
+#   return 6 scores
+#
+#   ************ MAIN ************
+#   import os
+#   import time
+#   import operator 
+#   CALL readFile() and set return values to fileName , outputFileName
+#   CALL readFile and pass fileName , set return values to students , title , course , location
+#   CALL menu and pass outputFileName , students , title , course , location
+#
+'''
 
 class student:
     def __init__( self , firstName , lastName , id , avg , letterGrade ):            #student class 
@@ -32,47 +152,47 @@ def menu( outputFileName , students , title , course , location ):
     m = waitForChar()                                                                   #waits for char to be entered 
 
     if m == 'a' or m == 'A' :
-        printStatememt( outputFileName , students , title , course , location )
-        time.sleep(5)
-        os.system('cls')
+        printStatememt( outputFileName , students , title , course , location )         #printStatement is passed outputFileName , students , title , course , location 
+        time.sleep(5)                                                                   #system sleeps for 5 seconds 
+        os.system('cls')                                                                #screen is cleared 
         return menu( outputFileName , students , title , course , location )
     elif m == 'b' or m == 'B' :
-        sortAlphabetically( students )
+        sortAlphabetically( students )                                                  #sortAlphabetically is passed students list
         time.sleep(5)
         os.system('cls')
         return menu( outputFileName , students , title , course , location )
     elif m == 'c' or m == 'C' :
-        sortByGrade( students )
+        sortByGrade( students )                                                         #sortByGrades is passed students 
         time.sleep(5)
         os.system('cls')
         return menu( outputFileName , students , title , course , location )
     elif m == 'd' or m == 'D' :
-        students = addStudent( students )
+        students = addStudent( students )                                               #addStudent is passed students and returns a new version of students 
         time.sleep(5)
         os.system('cls')
         return menu( outputFileName , students , title , course , location )
     elif m == 'e' or m == 'E' :
-        students = removeStudent( students )
+        students = removeStudent( students )                                            #removeStudent is passed students and returns a new version of students 
         time.sleep(5)
         os.system('cls')
         return menu( outputFileName , students , title , course , location )
     elif m == 'f' or m == 'F' :
-        students = editStudent( students )
+        students = editStudent( students )                                              #editStudents is passed students and returns a new version of students 
         time.sleep(5)
         os.system('cls')
         return menu( outputFileName , students , title , course , location )
     elif m == 'x' or m == 'X' :
-        exit()
+        exit()                                                                          #if 'x' is selected, the program quits 
     else :
-        print("Not an option , try again...\n\n")
+        print("Not an option , try again...\n\n")                                       #if an option other than what is displayed is chosen, it will prmpt the user again
         time.sleep(3)
         os.system('cls')
         menu( outputFileName , students , title , course , location )       
 
 def waitForChar() :
-    m = input()
+    m = input()                                                             #takes input
     print("\n\nYou selected '" + m[0] + "'\n\n")
-    return m[0]
+    return m[0]                                                             #uses only the first letter
 
 def readInFile() :
     #fileName = input("Enter the file path: ")                                      #comment out to automate 
@@ -136,9 +256,9 @@ def calcScore( qs , s1 , s2 ,s3 , s4 , s5 , s6 ) :
     return avg , lGrade , list
 
 def printStatememt( outputFileName , students , title , course , location ) :
-                                                                                                #
+                                                                                                
     print ("{:<25}{:<10}{:<5}" .format( 'Name' , 'Average' , 'Grade' ) )                        #
-    print("=" * 40)
+    print("=" * 40)                                                                             #prints header
 
     for i in students :                                                                         #iterates through list of students 
         print("{:<25}{:<10.2f}{:<5}" .format( i['firstName'] + " " + i['lastName'].rstrip() , i['avg'] , i['grade'] ) )                     #print statement 
@@ -212,52 +332,52 @@ def addStudent( students ) :
     return students
 
 def removeStudent( students ) :
-    target = input( "\n\nEnter LAST NAME of the student would you like to delete: " )
+    target = input( "\n\nEnter LAST NAME of the student would you like to delete: " )           #picks up last name
     print( "\n\nYou selected: '" + target + "' \n\nPlease wait....." )
 
-    for i in students :
+    for i in students :                                                                         #iterates through student
         if target in i['lastName'] :
-            print( "\n\nCongrats, you removed '" + i['lastName'].rstrip() + ", " + i['firstName'] + "' from the list...")
-            students.remove(i)
+            print( "\n\nCongrats, you removed '" + i['lastName'].rstrip() + ", " + i['firstName'] + "' from the list...")       #print statement
+            students.remove(i)                                                                  #removes element from list
             return students
         else :
             print("\n\nThat name is not in the list...")
             return students
 
 def editStudent( students ) :
-    target = input("\n\nEnter the LAST NAME of the student you like to edit: ")
+    target = input("\n\nEnter the LAST NAME of the student you like to edit: ")                     #enter last name
 
-    for i in students :
-        if target in i['lastName'] :
-            choice = input( "\n\nWould you like to edit TEST('t') or QUIZ('q') score: ")
+    for i in students :                                                                             #iterates through students 
+        if target in i['lastName'] :                                                                #if target is in the value  
+            choice = input( "\n\nWould you like to edit TEST('t') or QUIZ('q') score: ")            #give a choice
             if choice == 't' :
-                tScores = input("\n\nEnter 6 TEST SCORES separated with 1 space: ")
+                tScores = input("\n\nEnter 6 TEST SCORES separated with 1 space: ")                 #enter new test scores
                 s1 , s2 , s3 , s4 , s5 , s6 = tScores.split()
-                s1 , s2 , s3 ,s4 , s5 , s6 = scoreChecker( s1 , s2 , s3 , s4 , s5 , s6 )
+                s1 , s2 , s3 ,s4 , s5 , s6 = scoreChecker( s1 , s2 , s3 , s4 , s5 , s6 )            #verify test scores
 
-                qs = i['quiz']
+                qs = i['quiz']                                                                      #use same quiz score
 
                 avg , lGrade , list = calcScore( qs , s1 , s2 ,s3 , s4 , s5 , s6 )
 
-                i['avg'] , i['grade'] , i['testList'] = avg , lGrade , list
+                i['avg'] , i['grade'] , i['testList'] = avg , lGrade , list                         #return new values 
 
                 print("\n\nCongrats , you edited the record successfully!\n\n")
-                print(i)
+                print(i)                                                                            #prints record 
                 
                 return students
         elif choice == 'q' :
-            s1 , s2 , s3 ,s4 , s5 = i['testList']
+            s1 , s2 , s3 ,s4 , s5 = i['testList']                                                   #break down list to individual values 
             s6 = 0
 
-            qs = input("\n\nEnter a quiz score: ")
-            qs = qsChecker( qs )
+            qs = input("\n\nEnter a quiz score: ")                                                  #enter new quiz score 
+            qs = qsChecker( qs )                                                                    #verify quiz score
 
             avg , lGrade , list = calcScore( qs , s1 , s2 ,s3 , s4 , s5 , s6 )
 
-            i['avg'] , i['grade'] , i['testList'] , i['quiz'] = avg , lGrade , list , qs
+            i['avg'] , i['grade'] , i['testList'] , i['quiz'] = avg , lGrade , list , qs            #sets new values 
 
             print("\n\nCongrats , you edited the record successfully!\n\n")
-            print(i)
+            print(i)                                                                                #prints record 
 
             return students
         else :
@@ -265,7 +385,7 @@ def editStudent( students ) :
             return students
 
 def idChecker( id ) :
-    if len(id) != 9 :
+    if len(id) != 9 :                                                   #verify id                                                       
         while True:
             id = input("\n\nEnter *******VALID***** 9-DIGIT ID: ")
             if len(id) == 9 :
@@ -274,7 +394,7 @@ def idChecker( id ) :
     return id
 
 def qsChecker( qs ) :
-    if qs.isdigit() :
+    if qs.isdigit() :                                                       #verify quiz
         if int(qs) <= 100 :
             return int(qs)
     else :
@@ -285,7 +405,7 @@ def qsChecker( qs ) :
                     return int(qs)
 
 def scoreChecker( s1 , s2 , s3 , s4 , s5 , s6 ) :   
-    list = [ s1 , s2 , s3 , s4 , s5 , s6 ]
+    list = [ s1 , s2 , s3 , s4 , s5 , s6 ]                              #verify scores
 
     for i in list :
         if i.isdigit() :
@@ -297,7 +417,6 @@ def scoreChecker( s1 , s2 , s3 , s4 , s5 , s6 ) :
                     break
 
     return s1 , s2 , s3 , s4 , s5 , s6
-
 
 ###### MAIN #####
 import os
