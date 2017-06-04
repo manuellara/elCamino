@@ -127,14 +127,6 @@
    CALL menu and pass outputFileName , students , title , course , location
 '''
 
-class student:
-    def __init__( self , firstName , lastName , id , avg , letterGrade ):            #student class 
-        self.firstName = firstName
-        self.lastName = lastName
-        self.id = id
-        self.avg = avg
-        self.letterGrade = letterGrade
-
 def menu( outputFileName , students , title , course , location ):
     print("\nHello! Welcome to the menu!\n\nWhat would you like to do?\n")              #
     print ("a.) Print out all the students to file & monitor\n\n")                      #
