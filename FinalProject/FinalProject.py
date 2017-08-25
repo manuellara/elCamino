@@ -120,11 +120,10 @@
    if score is not a number , keep prompting user for a real number until condition is met
    return 6 scores
 
-   ************ MAIN ************
  
-   CALL readFile() and set return values to fileName , outputFileName
-   CALL readFile and pass fileName , set return values to students , title , course , location
-   CALL menu and pass outputFileName , students , title , course , location
+ CALL readFile() and set return values to fileName , outputFileName
+ CALL readFile and pass fileName , set return values to students , title , course , location
+ CALL menu and pass outputFileName , students , title , course , location
 '''
 
 def menu( outputFileName , students , title , course , location ):
@@ -183,8 +182,8 @@ def waitForChar() :
     return m[0]                                                             #uses only the first letter
 
 def readInFile() :
-    #fileName = input("Enter the file path: ")                                      #comment out to automate 
-    fileName = "FinalS17.txt"                                                       #comment out for real program 
+    fileName = input("Enter the file path: ")                                      #comment out to automate 
+    #fileName = "FinalS17.txt"                                                       #comment out for real program 
     if os.path.isfile(fileName):
         #outputFileName = input("\n\nEnter an output file name: ")
         outputFileName = "test.txt"

@@ -4,18 +4,17 @@ Location :                         SAL 101
 
 Name                     ID                       Average   Grade
 =================================================================
-Miriam Carlton Jones     ***-**-1111              100.00    A    
-John Johnsen             ***-**-4444              100.00    A    
 John Adams               ***-**-3333              91.54     A    
-Nancy Morgan Foley       ***-**-6666              90.26     A    
-Jerry Mac Alister        ***-**-7777              88.48     B    
-Helen Gardner            ***-**-6666              88.30     B    
-Phil Jordan              ***-**-6666              80.20     B    
-Haward Jackson           ***-**-9999              80.00     B    
 Willy Smith Jr.          ***-**-4444              79.20     C    
-Jack Dolan III           ***-**-7777              74.00     C    
-Gary Hawkins             ***-**-6666              73.50     C    
+Phil Jordan              ***-**-6666              80.20     B    
+Miriam Carlton Jones     ***-**-1111              100.00    A    
 Harry Williams           ***-**-4444              70.20     C    
-Allan Hanker             ***-**-7777              57.06     F    
+Gary Hawkins             ***-**-6666              73.50     C    
 Hal Jankins              ***-**-1111              0.00      I    
-mmm 'hhh                 ***-**-8888              77.88     C    
+John Johnsen             ***-**-4444              100.00    A    
+Nancy Morgan Foley       ***-**-6666              90.26     A    
+Allan Hanker             ***-**-7777              57.06     F    
+Helen Gardner            ***-**-6666              88.30     B    
+Jack Dolan III           ***-**-7777              74.00     C    
+Jerry Mac Alister        ***-**-7777              88.48     B    
+Haward Jackson           ***-**-9999              80.00     B    
